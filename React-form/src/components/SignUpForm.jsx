@@ -17,15 +17,15 @@ async function handleSubmit (e){
         "Content-Type": "application/json" 
       }, 
       body: JSON.stringify({ 
-        username: "username", 
-        password:  "pass"
+        username: "NAME", 
+        password:  ""
       }) 
     })
 
 
     const result = await response.json ();
-    console.log(result.token)
-    
+    console.log(result)
+    setToken(result.token)
 
 
     } catch (error){
